@@ -1,0 +1,10 @@
+# Project exclude paths
+/lh-article/lh-article-interface/target/
+/lh-article/lh-article-service/target/
+/lh-auth/target/
+/lh-common/target/
+/lh-gateway/target/
+/lh-page/target/
+/lh-registry/target/
+/lh-search/target/
+/lh-upload/target/

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lh-article/lh-article.iml" filepath="$PROJECT_DIR$/lh-article/lh-article.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-article/lh-article-interface/lh-article-interface.iml" filepath="$PROJECT_DIR$/lh-article/lh-article-interface/lh-article-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-article/lh-article-service/lh-article-service.iml" filepath="$PROJECT_DIR$/lh-article/lh-article-service/lh-article-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-auth/lh-auth.iml" filepath="$PROJECT_DIR$/lh-auth/lh-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-common/lh-common.iml" filepath="$PROJECT_DIR$/lh-common/lh-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-gateway/lh-gateway.iml" filepath="$PROJECT_DIR$/lh-gateway/lh-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-page/lh-page.iml" filepath="$PROJECT_DIR$/lh-page/lh-page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-registry/lh-registry.iml" filepath="$PROJECT_DIR$/lh-registry/lh-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-search/lh-search.iml" filepath="$PROJECT_DIR$/lh-search/lh-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lh-upload/lh-upload.iml" filepath="$PROJECT_DIR$/lh-upload/lh-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lhblog.iml" filepath="$PROJECT_DIR$/lhblog.iml" />
+    </modules>
+  </component>
+</project>

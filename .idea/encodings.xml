@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-article" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-article/lh-article-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-article/lh-article-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-page" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lh-upload" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

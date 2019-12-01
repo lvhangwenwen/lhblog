@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lh-gateway" />
+        <module name="lh-registry" />
+        <module name="lh-search" />
+        <module name="lh-common" />
+        <module name="lh-upload" />
+        <module name="lh-auth" />
+        <module name="lh-article-interface" />
+        <module name="lh-article-service" />
+        <module name="lh-page" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="lh-article" target="1.8" />
+      <module name="lh-article-interface" target="1.8" />
+      <module name="lh-article-service" target="1.8" />
+      <module name="lh-auth" target="1.8" />
+      <module name="lh-common" target="1.8" />
+      <module name="lh-gateway" target="1.8" />
+      <module name="lh-page" target="1.8" />
+      <module name="lh-registry" target="1.8" />
+      <module name="lh-search" target="1.8" />
+      <module name="lh-upload" target="1.8" />
+      <module name="lhblog" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lh-article-interface" options="-parameters" />
+      <module name="lh-article-service" options="-parameters" />
+      <module name="lh-auth" options="-parameters" />
+      <module name="lh-common" options="-parameters" />
+      <module name="lh-gateway" options="-parameters" />
+      <module name="lh-page" options="-parameters" />
+      <module name="lh-registry" options="-parameters" />
+      <module name="lh-search" options="-parameters" />
+      <module name="lh-upload" options="-parameters" />
+    </option>
+  </component>
+</project>

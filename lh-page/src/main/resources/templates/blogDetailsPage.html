@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="一个爱鼓捣前端的产品汪"/>
+    <meta name="keywords" content="产品,前端,文艺,二次元"/>
+    <!--[if lt IE 9]-->
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <!--[endif]-->
+    <link rel="icon" href="https://shawnzeng.com/wp-content/uploads/2018/02/cropped-logo-32x32.png" sizes="32x32"/>
+    <link rel="icon" href="https://shawnzeng.com/wp-content/uploads/2018/02/cropped-logo-192x192.png" sizes="192x192"/>
+    <link rel="apple-touch-icon-precomposed"
+          href="https://shawnzeng.com/wp-content/uploads/2018/02/cropped-logo-180x180.png"/>
+    <meta name="msapplication-TileImage"
+          content="https://shawnzeng.com/wp-content/uploads/2018/02/cropped-logo-270x270.png"/>
+    <link href="/front/css/Column.css" rel="stylesheet" >
+    <link type="text/css" media="all" href="/front/css/allPage.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="/front/tagcloud/tagcloud.min.css">
+    <link rel="stylesheet" href="/front/live2d/css/live2d.css" />
+    <title>一两清风，半盏明月</title></head>
+<body>
+<header id="header">
+    <div id="menu-blur-bg"></div>
+    <div id="menu-blur"></div>
+    <div id="menu-pc"><h1 id="logo"><a href="/index.html" class="post-type-link">航航爱汶汶吧</a></h1> <span id="mobile-menu"> <i
+            class="giligili giligili-menu"></i> </span>
+        <div id="menu-main" class="menu-main">
+            <ul>
+                <li id="menu-item-1404"
+                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1404">
+                    <a href="/index.html" class="post-type-link"><i class="giligili giligili-home"></i> 首页</a></li>
+                <li id="menu-item-2553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2553">
+                    <a href="#"><i class="giligili giligili-timeline"></i> 归档</a>
+                </li>
+                <li id="menu-item-1418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1418">
+                    <a href="#"><i class="giligili giligili-attachment"></i> 友情链接</a></li>
+                <li id="menu-item-1419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1419">
+                    <a href="/aboutMe.html" class="post-type-link"><i class="giligili giligili-theme"></i> 关于我</a></li>
+            </ul>
+        </div>
+        <span id="menu-search"> <i class="giligili giligili-search"></i> </span>
+        <form action="/searchshow.html" method="get" id="content-search" accept-charset="UTF-8">
+            <div class="search-header" ><span>请输入你想搜索的内容：</span> <i class="giligili giligili-close"></i></div>
+            <input type="text" name="key" id="key" value=""/>
+        </form>
+    </div>
+    <div id="header-bg"></div>
+</header>
+
+<div class="mobile-shade"></div>
+<div id="main">
+    <div id="sidebar-left" class="giligili-left">
+
+
+
+        <div class="widget_text giligili-item">
+            <div class="textwidget custom-html-widget">
+                <script src="//cdn.bootcss.com/aplayer/1.5.8/APlayer.min.js"></script>
+                <div id="aplayer1" class="aplayer"></div>
+                <script>var ap = new APlayer({
+                    element: document.getElementById('aplayer1'),
+                    autoplay:false,
+                    music: [{
+                        title: '風の住む街',
+                        author: '磯村由纪子',
+                        url: '/front/music/磯村由纪子 - 風の住む街.mp3',
+                        pic: '/front/img/风.jpg'
+                    },
+                        {
+                            title: 'ヨスガノソラ メインテーマ -記憶',
+                            author: '三輪学',
+                            url: '/front/music/三輪学 - ヨスガノソラ メインテーマ -記憶-.mp3',
+                            pic: '/front/img/穹.jpg'
+                        },
+//                        {
+//                            title: 'Promise',
+//                            author: '山岡晃',
+//                            url: 'music/山岡晃 - Promise.mp3',
+//                            pic: 'img/风.jpg'
+//                        },
+                        {
+                            title: '蝶恋',
+                            author: '林坤信',
+                            url: '/front/music/林坤信 - 蝶恋(钢琴版).mp3',
+                            pic: '/front/img/古剑.jpg'
+                        },
+                        {
+                            title: '月光の雲海',
+                            author: '久石譲',
+                            url: '/front/music/久石譲 - 月光の雲海.mp3',
+                            pic: '/front/img/轻语.jpg'
+                        }
+                    ]
+                });</script>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="main-part" class="giligili-left">
+
+        <div class="giligili-item breadcrumbs">当前位置：
+            <div itemscope itemtype="http://schema.org/WebPage" id="crumbs">
+
+                <th:block >
+                    <a itemprop="breadcrumb" href="/index.html" class="post-type-link">首页</a> >
+                </th:block>
+
+                <!--<a itemprop="breadcrumb" href="https://shawnzeng.com/category/news">大新闻</a> >-->
+                <span class="current" th:text="${title}">WordPress响应式二次元主题Giligili</span>
+            </div>
+        </div>
+
+        <div id="main-content">
+
+
+            <article class="giligili-item post" id="post" >
+                <div class="post-info">
+                    <div class="post-author">
+                        <a href="#" title="由Suyeq发布" rel="author" th:text="${author}">Suyeq</a>
+                    </div>
+                    <div class="post-meta"><i class="giligili giligili-time"></i>
+                        <time itemprop="datePublished" th:text="${time}" >4月前</time>
+                        &nbsp;•&nbsp;<span class="post-view"><i class="giligili giligili-view"></i> <a href="javascript:void(0);">3.93k</a></span>
+                        &nbsp;•&nbsp; <span class="post-comment-num"><i class="giligili giligili-comment"></i>
+                                            <a href="javascript:void(0);">49</a>
+                                      </span>
+                        <span></span>
+                    </div>
+                    <div class="box1 img" th:utext="${detail}">
+
+                    从实习后期开始写的主题，期间断断续续，今天终于写出第一版了！这套主题是在写完Memory之后写的，所以手法娴熟了很多，大家可以来尝试一下哦！另外我也会开始着手于重构Memory主题~
+
+                    </div>
+
+
+                    <!--分类-->
+                    <span class="category">
+                        <ul class="post-categories">
+                            <li><a href="javascript:void(0);" rel="category tag">大新闻</a></li>
+                            <!--<li><a href="https://shawnzeng.com/category/growth" rel="category tag">成长路</a></li>-->
+                        </ul>
+                    </span>
+                </div>
+                <img alt=''
+                     src='/front/img/lem6.jpg' th:src="@{${authorImg}}"
+                     class='avatar avatar-48 photo post-author-avatar' height='48' width='48'/> <i
+                    class="giligili giligili-certify-3"></i>
+            </article>
+
+
+            <div class="giligili-post-extra giligili-item">
+                <div><span class="post-like"><a href="javascript:;" data-action="blog_zan" data-id="2518" class="" > <i
+                        class="giligili giligili-zan"></i> 点赞 <span class="count" >27 </span> </a> </span></div>
+                <div class="giligili-pay-box"><i class="giligili giligili-Bbi"></i> 打赏
+                    <div class="pay-box">
+                        <div class="pay-header"><span>请作者吃个鸡腿！</span> <i class="giligili giligili-close"></i></div>
+                        <div class="pay-body">
+                            <h3>扫一扫支付</h3> <img class="alipay chosen"
+                                                src="/front/img/zhifubao.png"/>
+                            <img class="wechatpay"
+                                 src="/front/img/wechat.png"/>
+                            <div class="pay-chose"><a class="alibutton chosen"><img
+                                    src="https://shawnzeng.com/wp-content/themes/Giligili/img/alipay.png"/></a> <a
+                                    class="wechatbutton"><img
+                                    src="https://shawnzeng.com/wp-content/themes/Giligili/img/wechat.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="giligili-share-box"><i class="giligili giligili-share"></i> 分享
+                    <div class="social-share-box">
+                        <div class="social-share-header"><span>分享到站外</span> <i class="giligili giligili-close"></i>
+                        </div>
+                        <div class="social-share"><a href="javascript:;" class="social-share-icon giligili-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="comment-part giligili-item">
+
+                <!--关闭评论-->
+                <th:block >
+                    <div id="comments">
+                        <ol class="giligili-comments"><p class="center"><i class="giligili giligili-error"></i> 评论功能已经关闭!
+                        </p></ol>
+                        <div id="pagination">
+                            <div class="giligili-comments-page"></div>
+                        </div>
+                    </div>
+                </th:block>
+
+                <th:block >
+                    <!--发表评论-->
+                    <div class="comment-respond" id="respond">
+                        <h3 id="reply-title" class="comment-title comment-reply-title">
+                            评论<a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress-theme-giligili.html#respond" style="display:none;">放弃治疗</a>
+                        </h3>
+                        <form name="comment-form" class="comment-form" id="comment-form" method="post" action="/addConmentAndVisitor">
+                            <div id="comment-info">
+                                <div class="commentator">
+                                    <img alt='' src='https://secure.gravatar.com/avatar/f54bcbf60236951cc8b0f4fde9538510?s=48&#038;d=https%3A%2F%2Fshawnzeng.com%2Fwp-content%2Fthemes%2FGiligili%2Fimg%2Fcomment-avatar.png&#038;r=g'
+                                         srcset='https://secure.gravatar.com/avatar/f54bcbf60236951cc8b0f4fde9538510?s=96&#038;d=https%3A%2F%2Fshawnzeng.com%2Fwp-content%2Fthemes%2FGiligili%2Fimg%2Fcomment-avatar.png&#038;r=g 2x'
+                                         class='avatar avatar-48 photo' height='48' width='48'/>
+                                </div>
+                                <div class="comment-text">
+                                    <div class="comment-input">
+                                        <input type="text" name="author" value="" class="text-input" id="comment-author" placeholder="昵称 *">
+                                        <input type="text" name="email" value="" class="text-input" id="comment-email" placeholder="邮箱 *">
+                                        <input type="text" name="url" value="" class="text-input" id="comment-url" placeholder="网址">
+                                        <input type='text' name='sum' class='text-input sum' id='comment-validate' value='' placeholder='4 + 0 = ?' >
+                                        <input type='hidden' name='num1' value='4'>
+                                        <input type='hidden' name='num2' value='0'>
+                                    </div>
+
+                                    <div class="comment-s">
+                                        <textarea class="text-input error" id="comment"  name="comment" rows="8" cols="45" aria-required="true"  placeholder="一言：努力是不会背叛自己的，虽然梦想有时会背叛自己。"></textarea>
+                                        <div class="OwO no-touch"></div>
+                                        <button type="submit" name="submit" class="comment-submit push-status">发表评论</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type='hidden' name='comment_post_ID' value='2518' id='comment_post_ID' />
+                            <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+                        </form>
+                    </div>
+                    <div id="comments">
+                        <ol class="giligili-comments">
+                            <div ></div>
+                        </ol>
+
+                        <div id="pagination">
+                            <div class="giligili-comments-page">
+
+                                <!--<a class="prev page-numbers" href="">上一页</a>-->
+                                <!--<a class='page-numbers' href=''>1</a>-->
+                                <!--<a class='page-numbers' href=''>2</a>-->
+                                <!--<span aria-current='page' class='page-numbers current'>3</span>-->
+                            </div>
+                        </div>
+                    </div>
+
+                <!--评论列表-->
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="sidebar-right" class="giligili-left">
+        <div class="giligili-item">
+            <header class="giligili-item-header"><h3 class="giligili-item-title"><i
+                    class="giligili giligili-visitors"></i> 网站公告</h3></header>
+
+            <div class="post-lists">
+                <div class="post-lists-body">
+                    <div  >
+                        <div >
+                            <p>&nbsp; 大家好，这里是我的个人网站，目前网站还在建设当中，有部分功能还未实现，现在已经可以进行发帖和查贴，上传图片等，暂不支持上传视频。网站的初衷是用于自己记录个人的技术成长博客日记。日后会持续开发，对外公开，实现多用户互动类型的博客，请带家耐心等待QAQ！
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<div id="foot"><a id="back-to-top"><i class="giligili giligili-rocket"></i></a>
+    <p>版权所有 © 2019-2020 <a href="#">广东海洋大学</a> | 粤ICP备19095040号</a> <br/>Web <a
+            href="#" target="_blank">Auther</a> By <a
+            href="#" target="_blank">Lvhang</a> With <i class="giligili giligili-heart-o throb"></i>
+        | All Rights Reserved<br/><span class="my-face">(●'◡'●)ﾉ</span>本博客已萌萌哒运行了<span id="span_dt_dt"></span></p>
+
+
+    <div id="landlord" style="left:0px;bottom:0px;">
+        <div class="messagesrem" style="opacity:0"></div>
+        <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+        <div class="live_talk_input_body">
+            <div class="live_talk_input_name_body">
+                <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+            </div>
+            <div class="live_talk_input_text_body">
+                <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+                <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+            </div>
+        </div>
+        <input name="live_talk" id="live_talk" value="1"  />
+        <div class="live_ico_box">
+            <div class="live_ico_item type_info" id="showInfoBtn"></div>
+            <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+            <!--<div class="live_ico_item type_music" id="musicButton"></div>-->
+            <div class="live_ico_item type_youdu" id="youduButton"></div>
+            <div class="live_ico_item type_quit" id="hideButton"></div>
+            <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+            <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+            <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p4qbp15idv6bl55h381moha.mp3" type="hidden">
+            <input name="live2dBGM" value="https://t1.aixinxi.net/o_1c52p8frrlmf1aled1e14m56una.mp3" type="hidden">
+            <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+        </div>
+    </div>
+    <div id="open_live2d">召唤蕾姆</div>
+
+</div>
+<div id="layout-shadow"></div>
+<script src="/js/axios-0.18.0.js"></script>
+<script type='text/javascript'>var giligiliConfig = {
+    // "siteUrl": "https:\/\/shawnzeng.com\/wp-content\/themes\/Giligili",
+    "siteStartTime": "2019-8-19",
+    // "commentEditAgain": "1",
+    "loadPjax": "1"
+};</script>
+<script type='text/javascript' src='/front/js/jquery-3.2.1.min.js' ></script>
+<script type='text/javascript' src='/front/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='/front/js/func.js' ></script>
+<script type='text/javascript' src='/front/js/support.js' ></script>
+<script type='text/javascript' src='/front/js/app.js'></script>
+<!--解析markdown语法-->
+<script src="http://www.lvhangbb.cn/front/showdown-master/dist/showdown.js" ></script>
+<script type="text/javascript">
+    //获取要转换的文字
+   // window.onload=function(){
+        var text = document.getElementById("uniquevontent").innerText;
+        //创建实例
+        var converter = new showdown.Converter();
+        //进行转换
+        var html = converter.makeHtml(text);
+        //展示到对应的地方  result便是id名称
+        document.getElementById("uniquevontent").innerHTML = html;
+   // }
+</script>
+
+<!--云标签-->
+<!--<script src="/front/tagcloud/tagcloud.min.js"></script>-->
+
+<script src="/front/tagcloud/tagcloud.min.js" ></script>
+
+<script type="text/javascript">
+    // window.onload=function(){
+    tagcloud();
+    // }
+</script>
+
+<!--看板娘-->
+<script>
+    var message_Path = '/live2d/';//资源目录，如果目录不对请更改
+    var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<script type="text/javascript" src="/front/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/front/live2d/js/message.js" ></script>
+
+<!--<script type="text/javascript" src="/front/live2d/js/live2d.js"></script>-->
+<!--<script type="text/javascript" src="/front/live2d/js/message.js"></script>-->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</body>
+<script type="text/javascript" src="http://www.lvhangbb.cn/js/zongshu.js"></script>
+</html>

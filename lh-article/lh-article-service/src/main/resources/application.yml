@@ -1,0 +1,33 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: article-service
+  datasource:
+    url: jdbc:mysql://101.37.173.93:3306/myblog?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: woaiwo..
+  rabbitmq:
+    host: 101.37.173.93
+    username: lvhang
+    password: lvhang
+    virtual-host: /
+    template:
+      retry:
+        enabled: true
+        initial-interval: 10000ms
+        max-interval: 3000ms
+        multiplier: 2
+      exchange: lh.article.exchange
+    publisher-confirms: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
